@@ -1,1 +1,1 @@
-export * from './domain/services/base.service';
+export * from './domain/repositories/base.repository';

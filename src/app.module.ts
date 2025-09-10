@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CommonModule } from './common/common.module';
-import { TaskModule } from './task/task.module';
+import { TodoModule } from './todo/todo.module';
 
 @Module({
   imports: [
@@ -13,8 +13,9 @@ import { TaskModule } from './task/task.module';
       username: process.env.DATABASE_USERNAME,
       database: process.env.DATABASE_NAME,
       synchronize: true,
+      autoLoadEntities: true,
     }),
-    TaskModule,
+    TodoModule,
     CommonModule,
   ],
   controllers: [],

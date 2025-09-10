@@ -20,7 +20,7 @@ export class Todo {
   public status: boolean;
 
   @Column({ type: 'date', nullable: true })
-  public date: string;
+  public date: Date;
 
   @CreateDateColumn({ type: 'timestamp' })
   public createdAt: Date;
