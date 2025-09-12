@@ -29,13 +29,13 @@ export class TodoController {
   }
 
   @Get('/status')
-  public async findAllDone(
+  public async findAllByStatus(
     @Query('status', ParseBoolPipe) status: boolean,
   ): Promise<TodoDto[]> {
     if (status) {
-      return await this.todoService.findDoneTodos();
+      return await this.todoService.findAllDone();
     }
-    return await this.todoService.findNonDoneTodos();
+    return await this.todoService.findAllNotDone();
   }
 
   @Post()

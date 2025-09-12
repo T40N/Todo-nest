@@ -1,6 +1,6 @@
 import { DeepPartial, FindManyOptions, Repository } from 'typeorm';
 
-export abstract class BaseRepository<TEntity extends { id: string }> {
+export abstract class BaseAbstractRepository<TEntity extends { id: string }> {
   protected constructor(protected readonly repo: Repository<TEntity>) {}
 
   public async findAll(options?: FindManyOptions<TEntity>): Promise<TEntity[]> {

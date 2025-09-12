@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { CommonModule } from './common/common.module';
 import { TodoModule } from './todo/todo.module';
 
 @Module({
@@ -16,7 +15,6 @@ import { TodoModule } from './todo/todo.module';
       autoLoadEntities: true,
     }),
     TodoModule,
-    CommonModule,
   ],
   controllers: [],
   providers: [],
